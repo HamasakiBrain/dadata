@@ -35,6 +35,6 @@ class DadataServiceProvider extends ServiceProvider
             return new ClientClean();
         });
 
-        $this->mergeConfigFrom(__DIR__.'/../config/dadata.php', 'dadata');
+        $this->mergeConfigFrom(__DIR__ . '/../config/dadata.php', 'dadata');
     }
 }
