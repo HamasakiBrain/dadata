@@ -1,0 +1,45 @@
+{
+    "name": "hamasakibrain/laravel-dadata",
+    "description": "Dadata API client (https://dadata.ru)",
+    "keywords": ["laravel", "dadata", "autocomplete"],
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "role": "Developer",
+            "name": "Amon AMonov",
+            "email": "amon_amonov@bk.ru"
+        }
+    ],
+    "repositories":[
+        {
+            "type": "vcs",
+            "url": "git@github.com:HamasakiBrain/dadata.git"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "ext-json": "*",
+        "ext-curl": "*",
+        "guzzlehttp/guzzle": ">=6.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "HamasakiBrain\\Dadata\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel":{
+            "providers": [
+                "HamasakiBrain\\Dadata\\DadataServiceProvider"
+            ],
+            "aliases": {
+                "DadataSuggest": "HamasakiBrain\\Dadata\\Facades\\DadataSuggest",
+                "DadataClean": "HamasakiBrain\\Dadata\\Facades\\DadataClean"
+            }
+        }
+    }
+}
